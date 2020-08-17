@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/prata"
+    tools:context=".Dados_Cliente">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/toolbar1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/Toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:title="">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:elevation="3dp">
+
+                            <ImageView
+                                android:id="@+id/imgDados"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginStart="10dp"
+                                android:elevation="1dp"
+                                app:srcCompat="@drawable/ic_maxima_pessoa_ativo" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/imgDados"
+                                android:layout_centerHorizontal="true"
+                                android:fontFamily="@font/santral_bold"
+                                android:gravity="center"
+                                android:text="@string/Dados"
+                                android:textColor="@color/branco" />
+                        </RelativeLayout>
+
+                        <Button
+                            android:id="@+id/btnDados"
+                            style="?attr/borderlessButtonStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:backgroundTint="@color/azulMaisClaro" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:elevation="3dp">
+
+                            <ImageView
+                                android:id="@+id/imgHisPedido"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginStart="10dp"
+                                android:elevation="1dp"
+                                app:srcCompat="@drawable/ic_maxima_historico_pedidos_inativo" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/imgHisPedido"
+                                android:fontFamily="@font/santral_bold"
+                                android:gravity="center"
+                                android:text="@string/HistPedidos"
+                                android:textColor="@color/cinzaEscuro_4" />
+                        </RelativeLayout>
+
+                        <Button
+                            android:id="@+id/btnHisPedidos"
+                            style="?attr/borderlessButtonStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:backgroundTint="@color/azulMaisClaro" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:elevation="3dp">
+
+                            <ImageView
+                                android:id="@+id/imgAlvaras"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginStart="10dp"
+                                android:elevation="1dp"
+                                app:srcCompat="@drawable/ic_maxima_alvara_inativo" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/imgAlvaras"
+                                android:layout_centerHorizontal="true"
+                                android:fontFamily="@font/santral_bold"
+                                android:text="@string/Alvaras"
+                                android:textColor="@color/cinzaEscuro_4" />
+                        </RelativeLayout>
+
+                        <Button
+                            android:id="@+id/btnAlvaras"
+                            style="?attr/borderlessButtonStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:backgroundTint="@color/azulMaisClaro" />
+                    </FrameLayout>
+                </RelativeLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <RelativeLayout
+        android:id="@+id/mensagem"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_above="@id/toolbar1"
+        android:background="@drawable/gradiente_mensagem"
+        android:elevation="5dp"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/txtdataAtual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/santral_bold"
+            android:text="10/09/2018"
+            android:textColor="@color/branco" />
+
+        <TextView
+            android:id="@+id/txtHoraAtual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_toRightOf="@id/txtdataAtual"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/santral_bold"
+            android:text="17:09"
+            android:textColor="@color/branco" />
+
+        <TextView
+            android:id="@+id/traco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_toRightOf="@id/txtHoraAtual"
+            android:fontFamily="@font/santral_bold"
+            android:text="@string/traco"
+            android:textColor="@color/branco" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/traco"
+            android:fontFamily="@font/santral_bold"
+            android:text="@string/Status"
+            android:textColor="@color/branco" />
+
+        <TextView
+            android:id="@+id/txtStatus"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/status"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/santral_bold"
+            android:text="Ativo"
+            android:textColor="@color/branco" />
+
+        <Button
+            android:id="@+id/btnFechar"
+            style="?attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/gradiente_mensagem"
+            android:text="@string/Fechar"
+            android:textColor="@color/verde"
+            />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/efeito_button">
+
+        <TextView
+            android:id="@+id/txtDadoCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/santral_bold"
+            android:text="@string/DadosCliente"
+            android:textColor="@color/preto"
+            android:textSize="15sp" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/txtDadoCliente"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="07dp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/cinza" />
+
+        <TextView
+            android:id="@+id/txtCodigo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="07dp"
+            android:fontFamily="@font/santral_bold"
+            android:textColor="@color/preto"
+            android:textSize="12sp" />
+
+
+        <TextView
+            android:id="@+id/txtRazaoSocial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@id/txtCodigo"
+            android:fontFamily="@font/santral_bold"
+            android:textColor="@color/preto"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/txtNomeFantasia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtCodigo"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="07dp"
+            android:fontFamily="@font/santral_bold"
+            android:textColor="@color/cinza"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/Cnpj1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtNomeFantasia"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="07dp"
+            android:fontFamily="@font/santral_bold"
+            android:text="@string/CNPJ"
+            android:textColor="@color/cinzaClaro"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/txtCNPJ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtNomeFantasia"
+            android:layout_marginTop="07dp"
+            android:layout_toRightOf="@id/Cnpj1"
+            android:fontFamily="@font/santral_bold"
+            android:textColor="@color/preto"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/RamoAtividade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Cnpj1"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="07dp"
+            android:fontFamily="@font/santral_bold"
+            android:text="@string/RamoAtividade"
+            android:textColor="@color/cinzaClaro"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/txtRamoAtividade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtCNPJ"
+            android:layout_marginTop="07dp"
+            android:layout_toRightOf="@id/RamoAtividade"
+            android:fontFamily="@font/santral_bold"
+            android:textColor="@color/preto"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/endereco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/RamoAtividade"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="07dp"
+            android:fontFamily="@font/santral_bold"
+            android:text="@string/endereco"
+            android:textColor="@color/cinzaClaro"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/txtEdereco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtRamoAtividade"
+            android:layout_marginTop="07dp"
+            android:layout_marginBottom="20dp"
+            android:layout_toRightOf="@id/endereco"
+            android:fontFamily="@font/santral_bold"
+            android:textColor="@color/preto"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relative1"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/efeito_button">
+
+        <TextView
+            android:id="@+id/contato"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/santral_bold"
+            android:text="@string/Contato"
+            android:textColor="@color/preto"
+            android:textSize="15sp" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/contato"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="07dp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/cinza" />
+
+        <TextView
+            android:id="@+id/txtNomeCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view2"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/santral_bold"
+            android:textColor="@color/preto"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/telefone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtNomeCliente"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="07dp"
+            android:fontFamily="@font/santral_bold"
+            android:text="@string/Telefone"
+            android:textColor="@color/cinzaClaro"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/txtTelefone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtNomeCliente"
+            android:layout_marginTop="07dp"
+            android:layout_toRightOf="@id/telefone"
+            android:fontFamily="@font/santral_bold"
+
+            android:textColor="@color/preto"
+            android:textSize="10sp" />
+
+        <ImageView
+            android:layout_width="11dp"
+            android:layout_height="11dp"
+            android:layout_below="@id/txtNomeCliente"
+            android:layout_marginStart="05dp"
+            android:layout_marginTop="07dp"
+            android:layout_toRightOf="@id/txtTelefone"
+            android:src="@drawable/ic_maxima_telefone" />
+
+        <TextView
+            android:id="@+id/celular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/telefone"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="07dp"
+            android:fontFamily="@font/santral_bold"
+            android:text="@string/Celular"
+            android:textColor="@color/cinzaClaro"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/txtCelular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtTelefone"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="7dp"
+            android:layout_toRightOf="@id/celular"
+            android:fontFamily="@font/santral_bold"
+            android:textColor="@color/preto"
+            android:textSize="10sp" />
+
+        <ImageView
+            android:id="@+id/imgCelular"
+            android:layout_width="11dp"
+            android:layout_height="11dp"
+            android:layout_below="@id/telefone"
+            android:layout_marginStart="05dp"
+            android:layout_marginTop="05dp"
+            android:layout_toRightOf="@id/txtCelular"
+            android:src="@drawable/ic_maxima_telefone" />
+
+        <TextView
+            android:id="@+id/conjuge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/celular"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="07dp"
+            android:fontFamily="@font/santral_bold"
+            android:text="@string/Conjuge"
+            android:textColor="@color/cinzaClaro"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/txtConjuger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/celular"
+            android:layout_marginTop="07dp"
+            android:layout_toRightOf="@id/conjuge"
+            android:fontFamily="@font/santral_bold"
+            android:textColor="@color/preto"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/Tipo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/conjuge"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="07dp"
+            android:fontFamily="@font/santral_bold"
+            android:text="@string/Tipo"
+            android:textColor="@color/cinzaClaro"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/txtTipo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/conjuge"
+            android:layout_marginTop="07dp"
+            android:layout_toRightOf="@id/Tipo"
+            android:fontFamily="@font/santral_bold"
+            android:textColor="@color/preto"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/Time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Tipo"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="07dp"
+            android:fontFamily="@font/santral_bold"
+            android:text="@string/Time"
+            android:textColor="@color/cinzaClaro"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/txtTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Tipo"
+            android:layout_marginTop="07dp"
+            android:layout_marginBottom="18dp"
+            android:layout_toRightOf="@id/Time"
+            android:fontFamily="@font/santral_bold"
+            android:textColor="@color/preto"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/Email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtNomeCliente"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="07dp"
+            android:layout_toRightOf="@id/imgCelular"
+            android:fontFamily="@font/santral_bold"
+            android:text="@string/Email"
+            android:textColor="@color/cinzaClaro"
+            android:textSize="9sp" />
+
+        <TextView
+            android:id="@+id/txtEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtNomeCliente"
+            android:layout_marginTop="07dp"
+            android:layout_toRightOf="@id/Email"
+            android:fontFamily="@font/santral_bold"
+            android:textColor="@color/preto"
+            android:textSize="9sp" />
+
+        <ImageView
+            android:layout_width="11dp"
+            android:layout_height="11dp"
+            android:layout_below="@id/txtNomeCliente"
+            android:layout_marginStart="05dp"
+            android:layout_marginTop="07dp"
+            android:layout_toRightOf="@id/txtEmail"
+            android:src="@drawable/ic_maxima_email" />
+
+        <TextView
+            android:id="@+id/DataNasc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Email"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="07dp"
+            android:layout_toRightOf="@id/imgCelular"
+            android:fontFamily="@font/santral_bold"
+            android:text="@string/DataNasc"
+            android:textColor="@color/cinzaClaro"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/txtDataNasc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Email"
+            android:layout_marginTop="07dp"
+            android:layout_toRightOf="@id/DataNasc"
+            android:fontFamily="@font/santral_bold"
+            android:textColor="@color/preto"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/DataNascConj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/DataNasc"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="07dp"
+            android:layout_toRightOf="@id/imgCelular"
+            android:fontFamily="@font/santral_bold"
+            android:text="@string/DataNascConj"
+            android:textColor="@color/cinzaClaro"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/txtDataNascConj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/DataNasc"
+            android:layout_marginTop="07dp"
+            android:layout_toRightOf="@id/DataNascConj"
+            android:fontFamily="@font/santral_bold"
+            android:textColor="@color/preto"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/Time2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/DataNascConj"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="07dp"
+            android:layout_toRightOf="@id/imgCelular"
+            android:fontFamily="@font/santral_bold"
+            android:text="@string/Time"
+            android:textColor="@color/cinzaClaro"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/txtTime2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/DataNascConj"
+            android:layout_marginTop="07dp"
+            android:layout_toRightOf="@id/Time2"
+            android:fontFamily="@font/santral_bold"
+            android:textColor="@color/preto"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/relative2"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp">
+
+        <Button
+            android:id="@+id/btnVerifiStatus"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="@drawable/efeito_button"
+            android:backgroundTint="@color/verde"
+            android:elevation="3dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:elevation="6dp"
+            android:fontFamily="@font/santral_bold"
+            android:text="@string/VerificarStatus"
+            android:textColor="@color/branco"
+            android:textSize="15sp" />
+    </FrameLayout>
+</RelativeLayout>

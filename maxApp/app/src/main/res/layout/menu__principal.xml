@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relative"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/prata"
+    tools:context=".Menu_Principal">
+
+   <!-- <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        android:elevation="2dp"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:background="@color/azulMaisClaro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:title="@string/app_name"
+            app:titleTextColor="@color/branco"
+            />
+    </com.google.android.material.appbar.AppBarLayout>-->
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/prata"
+        android:gravity="center"
+        android:layout_marginBottom="@android:dimen/app_icon_size"
+        >
+
+        <RelativeLayout
+            android:id="@+id/centro"
+            android:layout_width="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"/>
+
+        <FrameLayout
+            android:id="@+id/frameClientes"
+            android:layout_width="158dp"
+            android:layout_height="158dp"
+            android:layout_toLeftOf="@id/centro"
+            android:backgroundTint="@color/prata"
+            android:layout_marginStart="10dp"
+            >
+
+            <Button
+                android:id="@+id/btnClintes"
+                android:layout_width="150dp"
+                android:layout_gravity="center"
+                android:layout_height="150dp"
+                style="?attr/borderlessButtonStyle"
+                android:background="@drawable/efeito_button"
+                android:elevation="5dp"/>
+
+            <ImageView
+                android:elevation="6dp"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_maxima_pessoas" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Clientes"
+                android:textSize="13sp"
+                android:fontFamily="@font/santral_bold"
+                android:textColor="@color/cinzaEscuro"
+                android:layout_gravity="center|bottom"
+                android:paddingBottom="10dp"
+                android:elevation="6dp"
+                />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/framePedidos"
+            android:layout_width="158dp"
+            android:layout_height="158dp"
+            android:layout_toRightOf="@id/centro"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="@color/prata"
+            >
+
+            <Button
+                android:id="@+id/btnPedidos"
+                android:layout_width="150dp"
+                style="?attr/borderlessButtonStyle"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:background="@drawable/efeito_button"
+                android:elevation="5dp"/>
+
+            <ImageView
+                android:elevation="6dp"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_maxima_pedido" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Pedidos"
+                android:textSize="13sp"
+                android:fontFamily="@font/santral_bold"
+                android:textColor="@color/cinzaEscuro"
+                android:layout_gravity="center|bottom"
+                android:paddingBottom="10dp"
+                android:elevation="6dp"
+                />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="158dp"
+            android:layout_height="158dp"
+            android:layout_toRightOf="@id/centro"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/prata"
+            android:layout_below="@id/framePedidos"
+
+            >
+
+            <Button
+                android:id="@+id/btnFerramentas"
+                android:layout_width="150dp"
+                android:layout_gravity="center"
+                style="?attr/borderlessButtonStyle"
+                android:layout_height="150dp"
+                android:background="@drawable/efeito_button"
+                android:elevation="5dp"/>
+
+            <ImageView
+                android:elevation="6dp"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_maxima_ferramentas" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Ferramentas"
+                android:textSize="13sp"
+                android:fontFamily="@font/santral_bold"
+                android:textColor="@color/cinzaEscuro"
+                android:layout_gravity="center|bottom"
+                android:paddingBottom="10dp"
+                android:elevation="6dp"
+                />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="158dp"
+            android:layout_height="158dp"
+            android:layout_toLeftOf="@id/centro"
+            android:background="@color/prata"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/frameClientes"
+
+            >
+
+            <Button
+                android:id="@+id/btnResumoVendas"
+                android:layout_width="150dp"
+                style="?attr/borderlessButtonStyle"
+                android:layout_gravity="center"
+                android:layout_height="150dp"
+                android:background="@drawable/efeito_button"
+                android:elevation="5dp"/>
+
+            <ImageView
+                android:elevation="6dp"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_maxima_resumo_vendas" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ResumoDeVendas"
+                android:textSize="13sp"
+                android:fontFamily="@font/santral_bold"
+                android:textColor="@color/cinzaEscuro"
+                android:layout_gravity="center|bottom"
+                android:paddingBottom="10dp"
+                android:elevation="6dp"
+                />
+        </FrameLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/nuvemConectada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_maxima_nuvem_conectado"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+    />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/nuvemConectada"
+        android:src="@drawable/ic_maxima_nuvem_desconectado"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/versao"
+        android:layout_toLeftOf="@id/nuvemConectada"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:textSize="28dp"
+        android:fontFamily="@font/santral_bookitalic"
+        />
+</RelativeLayout>

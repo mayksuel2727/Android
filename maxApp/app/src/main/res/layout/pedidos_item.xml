@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card_view_backg"
+    tools:showIn="@layout/hist__pedidos">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="08dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:id="@+id/txt_Recusado"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/cicle"
+            android:backgroundTint="@color/Amarelo"
+            android:gravity="center"
+            android:textColor="@color/branco"
+            android:textSize="24sp"
+            tools:text="!" />
+
+        <FrameLayout
+            android:id="@+id/Processamento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/cicle"
+                android:backgroundTint="@color/cinzaClaro"
+                android:gravity="center"
+                android:textSize="24sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:elevation="5dp"
+                android:src="@drawable/ic_maxima_em_processamento" />
+
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/txt_Pendente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+               
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/cicle"
+                android:backgroundTint="@color/cinza" />
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="P"
+                android:layout_gravity="center"
+                android:textColor="@color/branco"
+                android:fontFamily="@font/santral_bold"
+                android:textSize="20sp"
+                android:elevation="5dp"
+                />
+        </FrameLayout>
+
+
+        <TextView
+            android:id="@+id/txt_Bloqueado"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/cicle"
+            android:backgroundTint="@color/Amarelo"
+            android:gravity="center"
+            android:textColor="@color/roxo"
+            android:textSize="24sp"
+            android:text="B" />
+
+        <TextView
+            android:id="@+id/txt_Liberado"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/cicle"
+            android:backgroundTint="@color/azulMaisClaro"
+            android:gravity="center"
+            android:textColor="@color/branco"
+            android:textSize="24sp"
+            tools:text="L" />
+
+        <TextView
+            android:id="@+id/txt_Montado"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/cicle"
+            android:backgroundTint="@color/verdeClaro"
+            android:gravity="center"
+            android:textColor="@color/branco"
+            android:textSize="24sp"
+            android:text="M" />
+
+        <TextView
+            android:id="@+id/txt_Faturado"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/cicle"
+            android:backgroundTint="@color/verdeEscuro"
+            android:gravity="center"
+            android:textColor="@color/branco"
+            android:textSize="24sp"
+            tools:text="F" />
+
+        <TextView
+            android:id="@+id/txt_Cancelado"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/cicle"
+            android:backgroundTint="@color/vermelhoEscuro"
+            android:gravity="center"
+            android:textColor="@color/branco"
+            android:textSize="24sp"
+            tools:text="C" />
+
+        <TextView
+            android:id="@+id/txt_Ocamento"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/cicle"
+            android:backgroundTint="@color/cinzaEscuro_2"
+            android:gravity="center"
+            android:textColor="@color/branco"
+            android:textSize="24sp"
+            tools:text="O" />
+
+
+        <TextView
+            android:id="@+id/N_Ped_RCA_ERP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_toRightOf="@id/txt_Recusado"
+            android:fontFamily="@font/santral_bold"
+            android:text="@string/Np_RCA"
+            android:textColor="@color/cinzaClaro"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/txtN_Ped_RCA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_toRightOf="@id/N_Ped_RCA_ERP"
+            android:fontFamily="@font/santral_bold"
+            android:text="5.421.800.637"
+            android:textColor="@color/preto"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/tracohis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/txtCodigo"
+            android:layout_toRightOf="@id/txtN_Ped_RCA"
+            android:fontFamily="@font/santral_bold"
+            android:text="@string/traco"
+            android:textColor="@color/preto" />
+
+        <TextView
+            android:id="@+id/txtN_Ped_ERP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_toRightOf="@id/tracohis"
+            android:fontFamily="@font/santral_bold"
+            android:text="5.421.800.637"
+            android:textColor="@color/preto"
+            android:textSize="10sp" />
+
+
+        <TextView
+            android:id="@+id/cliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/N_Ped_RCA_ERP"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="05dp"
+            android:layout_toRightOf="@id/txt_Recusado"
+            android:fontFamily="@font/santral_bold"
+            android:text="@string/Cliente"
+            android:textColor="@color/cinzaClaro"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/txtCodigo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/N_Ped_RCA_ERP"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="05dp"
+            android:layout_toRightOf="@id/cliente"
+            android:fontFamily="@font/santral_bold"
+            android:text="848.246"
+            android:textColor="@color/preto"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/traco1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/N_Ped_RCA_ERP"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="05dp"
+            android:layout_toRightOf="@id/txtCodigo"
+            android:fontFamily="@font/santral_bold"
+            android:text="@string/traco"
+            android:textColor="@color/preto"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/txtCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/N_Ped_RCA_ERP"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="05dp"
+            android:layout_toRightOf="@id/traco1"
+            android:fontFamily="@font/santral_bold"
+            android:text="a f DA Silca"
+            android:textColor="@color/preto"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/txtStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cliente"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="05dp"
+            android:layout_toRightOf="@id/txt_Recusado"
+            android:fontFamily="@font/santral_bold"
+            android:text="Processando"
+            android:textColor="@color/preto"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/txtData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/santral_bold"
+            android:text="15:08"
+            android:textColor="@color/cinzaClaro"
+            android:textSize="10sp" />
+
+        <ImageView
+            android:id="@+id/imgCorte"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_below="@id/txtData"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="05dp"
+            app:srcCompat="@drawable/ic_maxima_legenda_corte" />
+
+        <ImageView
+            android:id="@+id/imgfalta"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_below="@id/txtData"
+            android:layout_marginTop="05dp"
+            android:layout_toLeftOf="@id/imgCorte"
+            app:srcCompat="@drawable/ic_maxima_legenda_falta" />
+
+        <ImageView
+            android:id="@+id/imgCancelado"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_below="@id/txtData"
+            android:layout_marginTop="05dp"
+            android:layout_toLeftOf="@id/imgfalta"
+            app:srcCompat="@drawable/ic_maxima_legenda_cancelamento" />
+
+        <ImageView
+            android:id="@+id/imgDevolacao"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_below="@id/txtData"
+            android:layout_marginTop="05dp"
+            android:layout_toLeftOf="@id/imgCancelado"
+            app:srcCompat="@drawable/ic_maxima_legenda_devolucao" />
+
+        <ImageView
+            android:id="@+id/imgTelemarketing"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_below="@id/txtData"
+            android:layout_marginTop="05dp"
+            android:layout_toLeftOf="@id/imgDevolacao"
+            app:srcCompat="@drawable/ic_maxima_legenda_telemarketing" />
+
+        <TextView
+            android:id="@+id/txtCritica"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtCodigo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="05dp"
+            android:fontFamily="@font/santral_bold"
+            android:text="@string/Critica"
+            android:textColor="@color/cinzaClaro"
+            android:textSize="10dp" />
+
+        <ImageView
+            android:id="@+id/imgAguardado"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_below="@id/cliente"
+            android:layout_marginTop="05dp"
+            android:layout_toRightOf="@id/txtCritica"
+            app:srcCompat="@drawable/ic_maxima_aguardando_critica" />
+
+        <ImageView
+            android:id="@+id/imgSucesso"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_below="@id/cliente"
+            android:layout_marginTop="05dp"
+            android:layout_toRightOf="@id/txtCritica"
+            app:srcCompat="@drawable/ic_maxima_critica_sucesso" />
+
+        <ImageView
+            android:id="@+id/imgAlerta"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_below="@id/cliente"
+            android:layout_marginTop="05dp"
+            android:layout_toRightOf="@id/txtCritica"
+            app:srcCompat="@drawable/ic_maxima_critica_alerta" />
+
+        <TextView
+            android:id="@+id/txtAtencao"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_below="@id/txtCodigo"
+            android:layout_marginTop="05dp"
+            android:layout_toRightOf="@id/txtCritica"
+            android:background="@drawable/cicle_vermelho"
+            android:fontFamily="@font/santral_bold"
+            android:gravity="center|top"
+            android:textColor="@color/branco"
+            tools:text="!" />
+
+        <TextView
+            android:id="@+id/txtDinheiro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgTelemarketing"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="05dp"
+            android:fontFamily="@font/santral_bold"
+            android:text="3000"
+            android:textColor="@color/preto"
+            android:textSize="10sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgTelemarketing"
+            android:layout_marginTop="05dp"
+            android:layout_toLeftOf="@id/txtDinheiro"
+            android:fontFamily="@font/santral_bold"
+            android:text="@string/rs"
+            android:textColor="@color/preto"
+            android:textSize="10sp" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">maxApp</string>
+    <string name="Clientes">Clientes</string>
+    <string name="ResumoDeVendas">Resumo de vendas</string>
+    <string name="Pedidos">Pedidos</string>
+    <string name="Ferramentas">Ferramentas</string>
+    <string name="DadosCliente">Dados do cliente</string>
+    <string name="versao">v.1.0.0</string>
+    <string name="Contato">Contatos</string>
+    <string name="endereco">"Endereço: "</string>
+    <string name="RamoAtividade">"Ramo de atividade: "</string>
+    <string name="CNPJ">"CNPJ: "</string>
+    <string name="Maxima">Máxima Sistemas</string>
+    <string name="Telefone">"Telefone: "</string>
+    <string name="Celular">"Celular: "</string>
+    <string name="Conjuge">"Cônjuge: "</string>
+    <string name="Tipo">Tipo: </string>
+    <string name="Email">"E-mail: "</string>
+    <string name="DataNasc">Data Nasc.: </string>
+    <string name="DataNascConj">"Data Nasc. Cônjuge: "</string>
+    <string name="Time">Time: </string>
+    <string name="VerificarStatus">Verificar status do cliente</string>
+    <string name="Dados">Dados</string>
+    <string name="HistPedidos">His. Pedidos</string>
+    <string name="Alvaras">Alvarás</string>
+    <string name="Status">Status</string>
+    <string name="traco">-</string>
+    <string name="Fechar">Fechar</string>
+    <string name="Np_RCA">N° Ped. RCA/ERP: </string>
+    <string name="Cliente">Cliente: </string>
+    <string name="Critica">Crítica: </string>
+    <string name="rs">R$ </string>
+    <string name="tracohis">-</string>
+    <string name="Legenda">Legenda</string>
+    <string name="Legendas">Legendas</string>
+    <string name="StutosDoPed">Status do pedido no ERP</string>
+    <string name="EmProc">Em processamento por parte do FV</string>
+    <string name="pendente">Posição no ERP Pendente</string>
+    <string name="bloqueado">Posição no ERP Bloqueado</string>
+    <string name="liberado">Posição no ERP Liberado</string>
+    <string name="montado">Posição no ERP Montado</string>
+    <string name="faturado">Posição no ERP Faturado</string>
+    <string name="ocamento">Orçamento</string>
+    <string name="cancelado">Posição no ERP Cancelado</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Nada">Nada econtrado</string>
+    <string name="Nao">Não há alvarás para exibir,</string>
+    <string name="veri">Verifique com o responsável pelo ERP</string>
+
+
+</resources>
