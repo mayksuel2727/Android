@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "298494837328",
+    "firebase_url": "https://appmax-277ba.firebaseio.com",
+    "project_id": "appmax-277ba",
+    "storage_bucket": "appmax-277ba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:298494837328:android:fb313c0b047fbfeff90755",
+        "android_client_info": {
+          "package_name": "com.example.maxapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "298494837328-i3cs1chhc3c4a885dl4tfv5ld7s8hjl7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKYa3xWd9o5AflifW8RB7zq55MWq0AbEA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "298494837328-i3cs1chhc3c4a885dl4tfv5ld7s8hjl7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
